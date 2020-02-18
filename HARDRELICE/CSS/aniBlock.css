@@ -1,0 +1,38 @@
+#rotateSquare{
+	width : 160px;
+	height: 160px;
+	background: black;
+	transition: width 2s, height 2s;
+	transition-timing-function: sin;
+	-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari and Chrome */
+	float: left;
+
+
+	-moz-transition: width 2s, height 2s, -moz-transform 2s; /* Firefox 4 */ 
+	-o-transition: width 2s, height 2s, -o-transform 2s; /* Opera */
+}
+
+#rotateSquare:hover{
+	position: 100, 100;
+	width : 200px;
+	height: 200px;
+	transform: rotate(360deg);
+	float: left;
+}
+
+#zoomSquare{
+	width : 250px;
+	height: 25px;
+	background: black;
+	transition: width 1s, height 1s;
+	transition-property: width, height;
+	transition-timing-function: sin;
+	float: left;
+
+}
+
+#zoomSquare:hover{
+	width : 720px;
+	height: 25px;
+	float: left;
+}
