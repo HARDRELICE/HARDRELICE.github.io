@@ -1,0 +1,55 @@
+{
+    "version": "Sample 1.0.0", 
+    "model": "moc/ni-j.moc", 
+    "textures": [
+        "../model/ni-j/moc/ni-j.2048/00.png", 
+        "../model/ni-j/moc/ni-j.2048/01.png"
+    ], 
+	 "layout": {
+        "center_x": 0,
+        "center_y": -0.02,
+        "width": 2.3
+    },
+    "hit_areas_custom": {
+        "head_x": [
+            -0.35,
+            0.6
+        ],
+        "head_y": [
+            0.19,
+            -0.2
+        ],
+        "body_x": [
+            -0.3,
+            -0.25
+        ],
+        "body_y": [
+            0.3,
+            -0.9
+        ]
+    },
+    "motions": {
+        "idle": [
+            {
+                "file": "../model/ni-j/mtn/00_idle.mtn"
+            }
+        ], 
+        "": [
+            {
+                "file": "../model/ni-j/mtn/01_happy.mtn"
+            }, 
+            {
+                "file": "../model/ni-j/mtn/02_angry.mtn"
+            }, 
+            {
+                "file": "../model/ni-j/mtn/03_fear.mtn"
+            }, 
+            {
+                "file": "../model/ni-j/mtn/04_surprise.mtn"
+            }, 
+            {
+                "file": "../model/ni-j/mtn/05_fun.mtn"
+			}
+		]
+	}
+}
