@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>HARDRELICE</title>
+	<meta http-equiv="Content-Type"content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon"href="../favicon.ico"/>
+	<link rel="bookmark" href="../favicon.ico"/>
+	<link rel="stylesheet" href="src/css/Mycss.css"/>
+	<link rel="stylesheet" href="src/css/Card.css">
+	<script src="src/js/jquery.js"></script>
+	<!-- <script src="src/js/L2Dwidget.0.min.js"></script>
+    <script src="src/js/L2Dwidget.min.js"></script>
+    <script charset="utf-8">
+    	L2Dwidget.init({
+    		"display": {
+		        "superSample": 3,
+		        "width": 200,
+		        "height": 400,
+		        "position": "left",
+		        "hOffset": 0,
+		        "vOffset": 0,
+        	},"model": {
+                "jsonPath": "https://unpkg.com/live2d-widget-model-shizuku@latest/assets/shizuku.model.json",
+                // "jsonPath": "src/live2d/小埋/13.json",
+                // "jsonPath": "src/live2d/樱花庄/ryunosuke/shifuku.model.json",
+                // "jsonPath": "src/live2d/rem/11.json",
+                "scale": 1,
+            }
+		});
+    </script> -->
+</head>
+
+<body>
+
+<!-- head -->
+<div class="header">
+	<div class="menu">≡</div>	<!-- Menu -->
+	<div><a href="/H">H</a></div>	<!-- Home -->
+	<div><a href="/R">R</a></div>	<!-- Rstudio -->
+	<div><a href="/E">E</a></div>	<!-- Entertainment -->
+	<div><a href="/F">F</a></div>	<!--  -->
+	<div><a href="/I">I</a></div>	<!-- Information -->
+	<div><a href="/T">T</a></div>	<!-- Tools -->
+	<iframe src="src/tools/clock.html" width="800" height="150" id="clock"></iframe>
+	<select id="selectEngine">
+		<option value="1">BAIDU</option>
+		<option value="2">BING</option>
+		<option value="3">BILIBILI</option>
+	</select>
+	<input id="searchBox" type="text" name="" placeholder="SEARCH SOMETHING?" onkeydown="enter();">
+	<input id="searchBtn" type="button" name="" value="SEARCH" onclick="search();">
+</div>
+<div class="banner" onclick="stop()">
+	<div id="headhider" tabindex="1"><h1>CLICK TO CLOSE CANVAS</h1></div>
+	<canvas id="canvas" width="1440" height="320"></canvas>
+	<div id="swiper"></div>
+</div>
+<div class="banner">
+ 	<div id="triangle_left"></div>
+ 	<div id="square_mid">
+ 		<h2>H A R D R E L I C E</h2>
+ 	</div>
+ 	<div id="triangle_right"></div>
+ 	<!-- <div id="triangle_up_left"></div> -->
+ 	<!-- <div id="triangle_up_right"></div> -->
+</div>
+
+<!-- main -->
+<div class="main">
+	<div class="divider"></div>
+
+	<div class="banner">
+		<div class="container">
+		    <div class="card">
+		        <div class="content">
+		            <h2>BILIBILI</h2>
+		            <p>ENTERTAINMENT</p>
+		            <a target="_blank" href="https://www.bilibili.com">FBI OPEN THE DOOR</a>
+		        </div>
+		    </div>
+		    <div class="card">
+		        <div class="content">
+		            <h2>MACBL</h2>
+		            <p>IMPLICATION</p>
+		            <a target="_blank" href="https://macbl.com">WHITE PIAO</a>
+		        </div>
+		    </div>
+		    <div class="card">
+		        <div class="content">
+		            <h2>W3SCH</h2>
+		            <p>IT</p>
+		            <a target="_blank" href="https://www.w3school.com.cn">GO! HTML!</a>
+		        </div>
+		    </div>
+		    <div class="card">
+		        <div class="content">
+		            <h2>GITHUB</h2>
+		            <p>IT</p>
+		            <a target="_blank" href="https://github.com/hardrelice">FORK ME!</a>
+		        </div>
+		    </div>
+		</div>
+	</div>
+
+	<div class="divider">GAMES</div>
+
+	<div class="banner">
+		<div class="button">lalala</div>
+	</div>
+
+</div>
+
+<!-- side -->
+<div id="side">
+	<div id="top" onclick="goTop();">
+		<img src="src/img/ROCKET.png"  >
+	</div>
+	<div id="addAcr" onclick="addAnchor()">
+		<img src="">
+	</div>
+	<div id="callAcr">
+		<img src="">
+	</div>
+	<div id="bottom">
+		<img src="">
+	</div>
+</div>
+<ul id="listAcr">
+
+</ul>
+
+<!-- foot -->
+<!-- <div id="live2d-widget" class="live2d-widget-container" style="position: fixed; left: 0; top: 0; width: 200px; height: 400px; z-index: 999; opacity: 1; pointer-events: none;">
+    <canvas id="live2dcanvas" width="400" height="800" style="position: absolute; left: 0px; top: 0px; width: 200px; height: 400px;"></canvas>
+</div> -->
+<!-- script -->
+	<script src="src/js/mine.js"></script>
+	<script src="src/js/Particle.js"></script>
+
+</body>
+</html>
