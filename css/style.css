@@ -3,7 +3,7 @@ body {
   color: #d2d2d2;
   font-weight: 400;
   font-size: 14px;
-  font-family: "Zpix";
+  font-family: "Zpix"; /*font-family: "Menlo", "Meslo LG", monospace;*/
   line-height: 1.725;
   text-rendering: geometricPrecision;
 }
