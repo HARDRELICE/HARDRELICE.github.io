@@ -3,7 +3,7 @@ body {
   color: #d2d2d2;
   font-weight: 400;
   font-size: 14px;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: "Zpix";
   line-height: 1.725;
   text-rendering: geometricPrecision;
 }
@@ -178,7 +178,7 @@ hr {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: Zpix; /*-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;*/
   font-size: 14px;
   line-height: 1.5;
   word-wrap: break-word;
@@ -1235,4 +1235,17 @@ label.el-checkbox {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+}
+.aplayer-list {
+  font-family: Zpix;
+}
+.aplayer-body {
+  font-family: Zpix;
+}
+.aplayer-lrc-contents {
+  font-family: Zpix;
+  font-weight: bold;
+/*background-color: #eee;*/
+/*opacity: 0.5;*/
+  bottom: 0;
 }
