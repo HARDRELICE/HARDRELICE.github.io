@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebColorAll</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script type="text/javascript">
+	function changeColor() {
+		if (event.which) {
+			if(event.which == 13) $('#block')[0].style.backgroundColor=$('#text')[0].value;
+		}
+	}
+</script>
+
+<body>
+	<div style="width:100px;height: 30px;margin: 0 auto;background: red;">
+		<input id="text" type="text" name="hexinput" style="width: 100%;height: 100%;padding: none;outline: none;border:none;" onkeydown="changeColor()">
+	</div>
+	<div id="block" style="width: 70px;height: 30px;background-image: initial;background-color: red;margin: 0 auto;"></div>
+</body>
+</html>

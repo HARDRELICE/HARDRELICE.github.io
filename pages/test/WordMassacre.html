@@ -1,0 +1,54 @@
+<!DOCTYPE html>   
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<title>
+		WordsMassacre
+	</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+<!-- <div id="vconsole">vconsole </br></div> -->
+
+<div id="app">
+	<div class="wordWrapper">
+		<div id="word">
+			pneumonoultramicroscopicsilicovolcanoconiosis
+		</div>
+		<div id="remember">
+			<div id="yes" onclick="yes()">
+			I Remember!</div>
+			<div id="no" onclick="no()">I'm Not Sure...</div>
+		</div>
+	</div>
+	
+	<div class="detail">
+		<div id="hidden"></div>
+		<div id="show"></div>
+	</div>
+	
+	
+</div>
+
+<div id="dictionary">
+	
+	<button id="pullup" onclick="showDictionary()">
+		<svg id ="pullupInner" width="24" height="24" viewBox="0 0 26 24" focusable="false">
+			<!-- <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path> -->
+			<path d="M14 6 L1 18 M12 6 L24 18" stroke="#fff" stroke-width="3" fill="none"></path>
+		</svg></button>
+	
+	<iframe id="frame" class="frameHide" src="https://m.youdao.com/dict?le=eng&q=">
+		Your Browser Don't Support iframe
+		</iframe>
+	
+</div>
+
+</body>
+</html>

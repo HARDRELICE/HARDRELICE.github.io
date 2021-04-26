@@ -1,3 +1,27 @@
+body::before {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  position: fixed;
+  background: center/cover no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-image: url("https://cdn.jsdelivr.net/gh/HARDRELICE/jsdelivr/pic/真希波.jpg");
+  z-index: -1;
+  pointer-events: none;
+  transition-duration: 0.3s;
+  filter: blur(10px);
+}
 body {
   background-color: #3a3e4a;
   color: #d2d2d2;
@@ -6,6 +30,9 @@ body {
   font-family: "Zpix"; /*font-family: "Menlo", "Meslo LG", monospace;*/
   line-height: 1.725;
   text-rendering: geometricPrecision;
+  transition-duration: 0.3s;
+  overscroll-behavior: none;
+/*user-select: none;*/
 }
 a {
   color: #d2d2d2;
@@ -16,9 +43,76 @@ a:hover {
   color: #699be9;
   text-decoration: underline;
 }
+q:lang(zh) {
+  quotes: "「" "」";
+}
+q q:lang(zh) {
+  quotes: "『" "』";
+}
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+img#center {
+  width: 70%;
+  height: 70%;
+  position: relative;
+  display: block;
+  margin: 50px auto;
+  margin-bottom: 0;
+}
+p.righteous {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-family: Righteous;
+}
+righteous {
+  font-family: Righteous;
+}
+Righteous {
+  font-family: Righteous;
+}
+/*@font-face{
+	font-family: Righteous;
+	src: url('/src/Righteous-Regular.ttf');
+}*/
+.info {
+  position: relative;
+}
+.bg_while .info .tags {
+  font-family: Righteous;
+  background-color: #4b5e7b;
+  border-radius: 5px;
+  color: #d2d2d2;
+}
+body:not([class="bg_while"]) .info .tags {
+  font-family: Righteous;
+  background-color: #4b5e7b;
+  border-radius: 5px;
+}
+.info .tags a {
+  font-family: Zpix;
+  color: #fff;
+  transition: 0.3s;
+  background-color: #808080;
+  margin: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+}
+.info .tags a:hover {
+  font-family: Zpix;
+  color: #0cf;
+  text-decoration: none;
+  cursor: pointer;
+}
 .footer {
   text-align: center;
   margin-top: 30px;
+  margin-bottom: 66px;
   color: #ccc;
 }
 .clear {
@@ -28,7 +122,7 @@ a:hover {
   width: 100%;
 }
 .hd {
-  width: 650px;
+  width: 800px;
   height: 100%;
   margin: auto;
 }
@@ -889,6 +983,34 @@ hr {
   background-color: #fff;
   color: #51525d;
 }
+/*.bg_while .v * {
+	color: black;
+}
+
+.bg_while .v .vlist * {
+	color: black;
+}
+
+.bg_while .v .vinfo * {
+	color: black;
+}
+
+.bg_while .v .vwrap * {
+	color: black;
+}
+
+body:not([class="bg_while"]) .v .vlist * {
+	color: white;
+}
+
+body:not([class="bg_while"]) .v .vinfo * {
+	color: white;
+}
+
+body:not([class="bg_while"]) .v .vwrap *:not([class~="vbtn"]) {
+	color: white;
+}
+*/
 .el-radio,
 .el-checkbox {
   position: relative;
@@ -1221,21 +1343,40 @@ label.el-checkbox {
     width: 90%;
     margin: auto;
   }
-  .posts .replay-btn {
-    display: none;
-  }
   .posttime {
     display: none;
   }
   .posts .post-title {
-    font-size: 16px;
+    font-size: 20px;
   }
   .postname {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+  .about-avatar {
+    right: -20px;
+    top: -20px;
+    transform: scale(0.6);
+  }
 }
+/* about avatar */
+.about-avatar {
+  position: absolute;
+  z-index: 2;
+  right: 6%;
+  width: 170px;
+  height: 200px;
+  background: url("https://cdn.jsdelivr.net/gh/journey-ad/nocilol.me@b3c899e0/img/shinobu@v2.1.png?v=1") no-repeat 0 0;
+  background-size: 509px 200px;
+}
+.about-avatar:hover {
+  background-position: -170px 0;
+}
+.about-avatar:active {
+  background-position: -340px 0;
+}
+/* APlayer Fix */
 .aplayer-list {
   font-family: Zpix;
 }
@@ -1245,7 +1386,132 @@ label.el-checkbox {
 .aplayer-lrc-contents {
   font-family: Zpix;
   font-weight: bold;
-/*background-color: #eee;*/
-/*opacity: 0.5;*/
+}
+div[class~='aplayer-narrow'] .aplayer-miniswitcher {
+  transition: 0.3s;
+  background-color: #6cf;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+div:not([class~='aplayer-narrow']) .aplayer-miniswitcher {
+  transition: 0.3s;
+  background-color: #6cf;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.bg_while div[class~='aplayer-narrow'] .aplayer-miniswitcher {
+  transition: 0.3s;
+  background-color: #fc6;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.bg_while div:not([class~='aplayer-narrow']) .aplayer-miniswitcher {
+  transition: 0.3s;
+  background-color: #fc6;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/* image-warpper */
+.image-wrapper {
+  height: 300px;
+  position: relative;
+  display: block;
+  margin: 50px auto;
+  margin-bottom: 0;
+  border-radius: 5px;
+/*align-items: center;*/
+}
+.image-wrapper div {
+/*height: 300px;*/
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   bottom: 0;
+  background: url("https://cdn.jsdelivr.net/gh/HARDRELICE/jsdelivr/pic/white/0.jpg") no-repeat center center;
+  background-size: contain;
+  background-position: center;
+}
+.image-wrapper div::after {
+  top: 1%;
+  left: 1%;
+  right: 1%;
+  bottom: 0;
+  content: "";
+  position: absolute;
+/*background-position: center;*/
+  width: inherit;
+  height: inherit;
+  background: inherit;
+  background-size: contain;
+  filter: blur(10px) brightness(80%) opacity(0.8);
+  z-index: -1;
+}
+/* avatar */
+.avatar {
+  width: 200px;
+  margin: 50px auto;
+}
+.avatar div {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+/*background: url("https://cdn.jsdelivr.net/gh/HARDRELICE/jsdelivr/pic/鬼滅の刃/1.jpg") no-repeat center center;*/
+/*background-size: 100% 100%;*/
+}
+.avatar div::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-size: 100% 100%;
+  border-radius: 50%;
+  transform: scale(0.95);
+  z-index: -1;
+  filter: blur(10px) brightness(80%) opacity(0.8);
+  top: 10%;
+/*-webkit-animation: filterChange 10s infinite linear;*/
+/*animation: filterChange 10s infinite linear;*/
+}
+/* Rwrapper */
+.Rwrapper {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 50px auto;
+  margin-bottom: 0;
+  display: block;
+}
+@media screen and (max-width: 800px) {
+  .Rwrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 50px auto;
+    margin-bottom: 0;
+    display: block;
+  }
+}
+.Rwrapper img.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+/*margin: 50px auto;*/
+}
+.Rwrapper img.blur {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  display: block;
+/*margin: 50px auto;*/
+  filter: blur(10px) brightness(85%) opacity(0.8);
+  z-index: -1;
 }

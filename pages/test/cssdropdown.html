@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title></title>
+</head>
+<body>
+<style>
+a {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-user-select: none;
+	-moz-user-focus: none;
+	-moz-user-select: none;
+	-webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+#drop-down-bar {
+	tap-highlight-color: rgba(0,0,0,0);
+	background: #eee;
+	width: 100%;
+	height: 50px;
+	background-image: initial;
+	padding: none;
+	margin: none;
+	border-bottom-left-radius: 20px; 
+	border-bottom-right-radius:20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#drop-down-bar:target {
+	tap-highlight-color: rgba(0,0,0,0);
+	background: black;
+	width: 100%;
+	height: 50px;
+	background-image: initial;
+	padding: none;
+	margin: none;
+	border-bottom-left-radius: 20px; 
+	border-bottom-right-radius:20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+</style>
+
+<a href="#drop-down-bar">
+<div id="drop-down-bar">
+	<svg width="24" height="24" viewBox="0 0 24 24" focusable="false" ><path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path></svg>
+</div>
+</a>
+
+</body>
+</html>
