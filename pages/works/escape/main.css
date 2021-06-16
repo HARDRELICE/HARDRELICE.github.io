@@ -1,0 +1,55 @@
+body {
+	background: #20201d;
+}
+#join {
+	width: 100%;
+}
+
+#join-input {
+	outline: none;
+	border-radius: 15px;
+	position: relative;
+	border: 3px solid #DAA520;
+	height: 30px;
+	width: 60%;
+	padding-left: 15px;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 20px;
+	color: #B8860B;
+	margin: 0 auto;
+	display: block;
+}
+
+#join-button {
+	user-select: none;
+	color: #DAA520;
+	background-color: white;
+	border: 3px solid #DAA520;
+	border-radius: 10px;
+	position: relative;
+	text-align: center;
+	height: 30px;
+	width: 30%;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 auto;
+	display: block;
+	transition: .3s;
+}
+
+#join-button:hover {
+	cursor: pointer;
+	color: white;
+	transition: .3s;
+	background-color: #DAA520;
+	border: 3px solid white;
+	border-radius: 10px;
+	position: relative;
+	text-align: center;
+	height: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 auto;
+	display: block;
+}

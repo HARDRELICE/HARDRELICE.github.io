@@ -30,9 +30,11 @@ textarea {
 .me .nick {
   color: #b854d4;
 }
-.info .nick,
+.info .nick {
+  color: #FFD700;
+}
 .info .text {
-  color: #CCC;
+  color: #DAA520;
 }
 .warn .nick,
 .warn .text {

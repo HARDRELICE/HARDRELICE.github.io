@@ -122,6 +122,7 @@ ul li {
 }
 #chatform {
   border-top: 1px solid;
+  border-right: 1px solid;
 }
 #chatinput {
   width: 100%;
@@ -141,6 +142,7 @@ ul li {
   width: 180px;
   padding-bottom: 10%;
 }
+
 h1,h2,h3,h4,h5,h6 {
   margin: 3px;
   margin-top: 0px;
@@ -226,9 +228,14 @@ img {
     float: none;
     text-align: left;
     display: inline;
+    font-size: 14px;
+    margin-left: 5px;
   }
   .text {
     display: inline;
+  }
+  .text p {
+    margin-left: 15px;
   }
   #sidebar {
     top: 0.5em;

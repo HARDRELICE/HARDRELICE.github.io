@@ -396,7 +396,6 @@ var COMMANDS = {
 		usersClear();
 
 		nicks.forEach(function (nick) {
-			console.log(nick.slice(0,4))
 			if (nick==SYSTEMNAME) {
 				HOSTONLINE = true
 				if (myNick!=SYSTEMNAME) {
@@ -411,7 +410,6 @@ var COMMANDS = {
 			}
 		});
 		USERCHECKED = true
-		console.log()
 		pushMessage({ nick: SYSTEMSTRING, text: "USERS ONLINE: " + newNicks.join(", "), admin: true })
 		if (myNick!=SYSTEMNAME) {
 			pushMessage({ nick: SYSTEMSTRING, text: "YOUR NICKNAME: " + myNick, admin: true})
@@ -473,6 +471,7 @@ var COMMANDS = {
 
 function pushMessage(args) {
 	// Message container
+	console.log(args)
 	var messageEl = document.createElement('div');
 	if (args.text.indexOf("New beta available at")!=-1) {
 		return
